@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class DeviceRequestResponseDTO {
+public class DeviceDataResponseDTO {
     private final String mensaje;
 }

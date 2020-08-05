@@ -10,6 +10,10 @@ import org.immutables.value.Value;
 @JsonSerialize(as = DeviceImmutable.class)
 @JsonDeserialize(as = DeviceImmutable.class)
 public interface Device {
+
+    @Value.Parameter
     String hash();
+
+    @Value.Parameter
     BiometryType biometryType();
 }
