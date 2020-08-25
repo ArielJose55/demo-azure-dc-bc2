@@ -17,7 +17,8 @@ INSERT INTO client_scope (owner_id, scope) VALUES
 
 INSERT INTO client_redirect_uri (owner_id, redirect_uri) VALUES
 	(@a, 'http://localhost/'),
-	(@a, 'http://localhost:8080/');
+	(@a, 'http://localhost:8080/'),
+	(@a, 'https://pruebasb2ccero.b2clogin.com/pruebasb2ccero.onmicrosoft.com/oauth2/authresp');
 	
 INSERT INTO client_grant_type (owner_id, grant_type) VALUES
 	(@a, 'authorization_code'),
