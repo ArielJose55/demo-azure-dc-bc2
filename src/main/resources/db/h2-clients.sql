@@ -19,6 +19,12 @@ INSERT INTO client_redirect_uri (owner_id, redirect_uri) VALUES
 	(@a, 'https://localhost'),
 	(@a, 'https://localhost:3000'),
 	(@a, 'https://pruebasb2ccero.b2clogin.com/pruebasb2ccero.onmicrosoft.com/oauth2/authresp');
+
+INSERT INTO client_response_type (owner_id, response_type) VALUES
+    (@a, 'code'),
+    (@a, 'token'),
+    (@a, 'id_token');
+
 	
 INSERT INTO client_grant_type (owner_id, grant_type) VALUES
 	(@a, 'authorization_code'),
