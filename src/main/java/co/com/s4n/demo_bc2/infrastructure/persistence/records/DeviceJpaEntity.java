@@ -8,8 +8,8 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Getter
-@Entity
-@Table(name = "tb2c_device")
+//@Entity
+//@Table(name = "tb2c_device")
 @NoArgsConstructor
 @AllArgsConstructor
 public class DeviceJpaEntity {
@@ -21,6 +21,6 @@ public class DeviceJpaEntity {
     @Column(name = "id_device", nullable = false, unique = true)
     private String idDevice;
 
-    @Column(name = "fechaEvento", nullable = false)
+    @Column(name = "fecha_evento", nullable = false)
     private String biometryType;
 }

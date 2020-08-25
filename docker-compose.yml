@@ -1,15 +1,40 @@
 
 version: "3.5"
 services:
-  device:
+  idp-java:
     image: "openjdk:8-jdk-alpine"
-    container_name: "idp-service"
+    container_name: "idp-java"
     working_dir: /home/app
     volumes:
       - ./:/home/app
     ports:
-      - "8000:8080"
+      - "8000:8000"
     expose:
       - "8000"
     command: >
       sh -c "chmod 777 ./gradlew && ./gradlew clean build && java -jar build/libs/*.jar"
+#    networks:
+#      - pgnet-access
+
+#  idp-database:
+#    image: "postgres"
+#    restart: always
+#    container_name: "idp-database"
+#    environment:
+#      POSTGRES_DB: "idp-database"
+#      POSTGRES_USER: "idp_user"
+#      POSTGRES_PASSWORD: "root"
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - pgdata-access
+#    networks:
+#      - pgnet-access
+
+#volumes:
+#  pgdata-access:
+#    name: pgdata-access
+
+#networks:
+#  pgnet-access:
+#    driver: bridge

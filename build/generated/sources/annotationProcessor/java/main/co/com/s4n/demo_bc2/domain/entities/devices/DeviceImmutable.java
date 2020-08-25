@@ -20,7 +20,7 @@ import org.immutables.value.Generated;
  */
 @Generated(from = "Device", generator = "Immutables")
 @SuppressWarnings({"all"})
-@javax.annotation.processing.Generated("org.immutables.processor.ProxyProcessor")
+@javax.annotation.Generated("org.immutables.processor.ProxyProcessor")
 public final class DeviceImmutable implements Device {
   private final String hash;
   private final BiometryType biometryType;
