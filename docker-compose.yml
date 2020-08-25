@@ -1,0 +1,15 @@
+
+version: "3.5"
+services:
+  device:
+    image: "openjdk:8-jdk-alpine"
+    container_name: "idp-service"
+    working_dir: /home/app
+    volumes:
+      - ./:/home/app
+    ports:
+      - "8000:8080"
+    expose:
+      - "8000"
+    command: >
+      sh -c "chmod 777 ./gradlew && ./gradlew clean build && java -jar build/libs/*.jar"
