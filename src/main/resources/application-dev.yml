@@ -11,7 +11,7 @@ logging:
 openid:
   connect:
     server:
-      issuer: ${URL_ISSIER}
+      issuer: https://demo-b2c.herokuapp.com/
       topbarTitle: OpenID Connect Server
       logoImageUrl: resources/images/openid_connect_small.png
     crypto:
